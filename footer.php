@@ -22,12 +22,12 @@
 					<?php do_action( 'clean_credits' ); ?>
 					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'clean' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'clean' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
-                    <a class="credits" rel="nofollow" href="http://themekraft.com/" target="_clean" title="Themes and Plugins developed by Themekraft" alt="Themes and Plugins developed by Themekraft"><?php _e('Themes and Plugins developed by Themekraft.','clean') ?> </a>
+                    <a class="credits" rel="designer" href="https://www.tvojsajt.com/" target="_clean" title="Theme by Tvoj Sajt" alt="Theme developed by Tvoj Sajt"><?php _e('Theme by Tvoj Sajt.','clean') ?> </a>
 				</div><!-- close .site-info -->
 
 			</div>
 		</div>
-	</div><!-- close .container -->
+	</div><!-- close .container-fluid -->
 </footer><!-- close #colophon -->
 
 <?php wp_footer(); ?>
