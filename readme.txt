@@ -1,25 +1,14 @@
 Theme Name: clean
-Theme URI: http://themekraft.com/store/clean-free-wordpress-starter-theme-based-on-twitter-bootstrap/
-Author: ThemeKraft
-Author URI: http://themekraft.com/
-Description: Hi, I am the ultra minimal starter theme clean, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress. You can find me on GitHub. Fork me! I'm waiting for you ;)
-Version: 1.1.10
+Theme URI: https://www.tvojsajt.com/izrada-sajta/
+Author: Zoran Stanic
+Author URI: https://www.tvojsajt.com/
+Description: Simple Wordpress theme based on underscores and tk starter themes with Bootstrap integrated
+Version: 1.0
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: gray, light, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, sticky-post,  theme-options, threaded-comments, translation-ready
 
 *************************************************************
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-This theme is the most seamless and minimalistic integration of Twitter Bootstrap Framework into
-the _s starter theme from Automattic, the guys behind WordPress.
-
-_s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc. Twitter Bootstrap
-
-*************************************************************
-
 Credits:
 
 1. Bootstrap
@@ -42,7 +31,7 @@ Credits:
 
 *************************************************************
 
-The clean Project on Github - https://github.com/Themekraft/clean/
+The clean Project on Github - https://github.com/pilgrim011/clean-wordpress-theme
 
 *************************************************************
 
