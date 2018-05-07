@@ -20,9 +20,11 @@
 
 				<div class="site-info">
 					<?php do_action( 'clean_credits' ); ?>
+					<?php if (is_front_page()) { ?>
 					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'clean' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'clean' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
                     <a class="credits" rel="designer" href="https://www.tvojsajt.com/" target="_clean" title="Theme by Tvoj Sajt" alt="Theme developed by Tvoj Sajt"><?php _e('Theme by Tvoj Sajt.','clean') ?> </a>
+					<?php } ?>
 				</div><!-- close .site-info -->
 
 			</div>

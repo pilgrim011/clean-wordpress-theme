@@ -74,7 +74,7 @@ function clean_customize_register( $wp_customize ) {
 		'section' => 'colors',
 		'label'   => esc_html__( 'Sidebar Background', 'clean' ),
 		) ) );
-		// Header background color
+		// Header and footer background color
 		$wp_customize->add_setting(
 			// $id
 			'header_background_color_setting',
@@ -96,8 +96,36 @@ function clean_customize_register( $wp_customize ) {
 				array(
 					'settings'		=> 'header_background_color_setting',
 					'section'		=> 'colors',
-					'label'			=> __( 'Header Background Color', 'clean' ),
-					'description'	=> __( 'Select the background color for header.', 'clean' ),
+					'label'			=> __( 'Header and Footer Background Color', 'clean' ),
+					'description'	=> __( 'Select the background color for header and footer.', 'clean' ),
+				)
+			)
+		);
+
+		// Header and footer text color
+		$wp_customize->add_setting(
+			// $id
+			'header_text_color_setting',
+			// $args
+			array(
+				'default'   => '',
+				'transport'			=> 'refresh',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				// $wp_customize object
+				$wp_customize,
+				// $id
+				'header_text_color',
+				// $args
+				array(
+					'settings'		=> 'header_text_color_setting',
+					'section'		=> 'colors',
+					'label'			=> __( 'Header and Footer Text Color', 'clean' ),
+					'description'	=> __( 'Select the text color for header and footer.', 'clean' ),
 				)
 			)
 		);
