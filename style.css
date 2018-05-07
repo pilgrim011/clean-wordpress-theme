@@ -207,9 +207,10 @@ display: block;
 	clear: both;
 }
 .container { 
-	background: #d7dfd6; 
 	border-right: 1px solid #eee; 
 	border-left: 1px solid #eee;
+	
+	width: 100%;
 }
 /*
  == Quick CSS styling tips ==
@@ -263,4 +264,43 @@ nav .input-group,
 nav .input-group-btn,
 nav .form-control {
     display: inline;
+}
+.navbar {
+	min-height: 50px;
+	background-color: transparent;
+	border-color: transparent;
+	color: snow;
+	margin-top: 1em;
+  }
+
+  .container #navbar-collapse a{
+	  color: whitesmoke;
+  }
+  .navbar-default .navbar-nav .active{
+    color: #000;
+	background: #d65c14;
+}
+.navbar-default .navbar-nav .active a,
+.navbar-default .navbar-nav .active a:hover,
+.navbar-default .navbar-nav .active a:focus {
+    color: #000;
+	background: #d65c14;
+	
+}
+  .size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+.sidebar{
+	padding-top: 6em;
+}
+a:link{
+	text-decoration: none;
+}
+.site-navigation{
+	background-color: steelblue;
 }

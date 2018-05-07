@@ -30,9 +30,10 @@ function clean_custom_header_setup() {
 		add_theme_support( 'custom-header', apply_filters( 'clean_custom_header_args', array(
 			'default-image'          => '',
 			'default-text-color'     => '000',
-			'width'                  => 1170,
-			'height'                 => 250,
+			'width'                  => 0,
+			'height'                 => 0,
 			'flex-height'            => true,
+			'flex-width'             => true,
 			'wp-head-callback'       => 'clean_header_style',
 			'admin-head-callback'    => 'clean_admin_header_style',
 			'admin-preview-callback' => 'clean_admin_header_image',

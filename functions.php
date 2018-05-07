@@ -58,6 +58,9 @@ function clean_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 		) ) );
+		/** 
+		 * Enable title tag support
+		*/
 	add_theme_support( 'title-tag' );
 	
 	/**
@@ -66,6 +69,19 @@ function clean_setup() {
 	 * If you're building a theme based on clean, use a find and replace
 	 * to change 'clean' to the name of your theme in all the template files
 	*/
+
+
+	
+		$defaults = array(
+			'height'      => 55,
+			'width'       => 140,
+			'flex-height' => false,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-description' ),
+		);
+		add_theme_support( 'custom-logo', $defaults );
+	
+
 	load_theme_textdomain( 'clean', THEME_DIR_PATH . '/languages' );
 
 	/**
@@ -110,6 +126,9 @@ function clean_scripts() {
 
 	// load clean styles
 	wp_enqueue_style( 'clean-style', get_stylesheet_uri() );
+   // Modify our styles registration:
+	$custom_css = clean_get_customizer_css();
+	wp_add_inline_style( 'clean-style', $custom_css );
 
 	// load bootstrap js
 	wp_enqueue_script('clean-bootstrapjs', THEME_DIR_URI . '/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
@@ -167,3 +186,93 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
+/**
+ * Remove parts of the Options menu we don't use.
+ *
+ * @param WP_Customize_Manager $wp_customize Customizer manager.
+ */
+function de_register( $wp_customize ) {
+    $wp_customize->remove_control('display_header_text');
+}
+add_action( 'customize_register', 'de_register', 11 );
+
+function clean_get_customizer_css() {
+    ob_start();
+
+    $text_color = get_theme_mod( 'text_color', '' );
+    if ( ! empty( $text_color ) ) {
+      ?>
+      body {
+        color: <?php echo $text_color; ?>;
+      }
+      <?php
+    }
+
+
+    $link_color = get_theme_mod( 'link_color', '' );
+    if ( ! empty( $link_color ) ) {
+      ?>
+      a {
+        color: <?php echo $link_color; ?>;
+        border-bottom-color: <?php echo $link_color; ?>;
+      }
+      <?php
+    }
+
+    
+    $border_color = get_theme_mod( 'border_color', '' );
+    if ( ! empty( $border_color ) ) {
+      ?>
+      input,
+      textarea {
+        border-color: <?php echo $border_color; ?>;
+      }
+      <?php
+    }
+
+    
+    $accent_color = get_theme_mod( 'accent_color', '' );
+    if ( ! empty( $accent_color ) ) {
+      ?>
+      a:hover {
+        color: <?php echo $accent_color; ?>;
+        border-bottom-color: <?php echo $accent_color; ?>;
+      }
+
+      button,
+      input[type="submit"] {
+        background-color: <?php echo $accent_color; ?>;
+      }
+      <?php
+    }
+
+    
+    $sidebar_background = get_theme_mod( 'sidebar_background', '' );
+    if ( ! empty( $sidebar_background ) ) {
+      ?>
+      .sidebar {
+        background-color: <?php echo $sidebar_background; ?>;
+      }
+      <?php
+    }
+
+
+    $css = ob_get_clean();
+    return $css;
+  }
+
+  function clean_customizer_css() {
+	if ( ! get_theme_mod( 'header_background_color_setting' ) ) {
+		return;
+	}
+?>
+	<style type="text/css">
+		.site-navigation {
+			<?php if ( get_theme_mod( 'header_background_color_setting' ) ) { ?>
+			background-color: <?php echo get_theme_mod( 'header_background_color_setting' ); ?>;
+			<?php } ?>
+		}
+	</style>
+<?php
+} // end clean_customizer_css
+add_action( 'wp_head', 'clean_customizer_css');
