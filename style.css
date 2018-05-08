@@ -41,7 +41,6 @@ body {
 	word-wrap: break-word;
 	min-height: 100vh;
 	position: relative;
-	margin: 0 auto;
 }
   
 .site-footer {
@@ -148,8 +147,6 @@ object {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
 }
-
-
 /* Content */
 .main-content-inner {
 	padding-bottom: 1.5em;

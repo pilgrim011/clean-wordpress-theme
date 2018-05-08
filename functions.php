@@ -296,3 +296,35 @@ function clean_customizer_text_css() {
 } // end clean_customizer_css
 add_action( 'wp_head', 'clean_customizer_text_css');
 add_action( 'wp_footer', 'clean_customizer_text_css');
+
+//REQUIRED PLUGIN - include the TGM_Plugin_Activation class.
+
+require_once get_template_directory() . ('/includes/class-tgm-plugin-activation.php');
+add_action( 'tgmpa_register', 'clean_register_required_plugins' );
+
+/**
+ * Register the required plugins for this theme.
+ *
+ */
+function clean_register_required_plugins() {
+	/*
+	 * Array of plugin arrays. Required keys are name and slug.
+	 * If the source is NOT from the .org repo, then source is also required.
+	 */
+	$plugins = array(
+
+		// This is an example of how to include a plugin from the WordPress Plugin Repository.
+		array(
+			'name'      => 'Page Builder by SiteOrigin',
+			'slug'      => 'siteorigin-panels',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'SiteOrigin Widgets Bundle',
+			'slug'      => 'so-widgets-bundle',
+			'required'  => false,
+		),
+		);
+
+		tgmpa( $plugins );
+}
