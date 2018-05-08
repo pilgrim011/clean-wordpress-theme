@@ -39,8 +39,20 @@ Credits:
 /* This is a small security for too long strings titles */
 body {
 	word-wrap: break-word;
+	min-height: 100vh;
+	position: relative;
+	margin: 0;
 }
-
+  
+.site-footer {
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	text-align: center;
+  }
+  .sep{
+	  color:whitesmoke;
+  }
 /* Alignment */
 .alignleft {
 	display: inline;

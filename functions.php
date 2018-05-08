@@ -192,7 +192,8 @@ function woocommerce_support() {
  * @param WP_Customize_Manager $wp_customize Customizer manager.
  */
 function de_register( $wp_customize ) {
-    $wp_customize->remove_control('display_header_text');
+	$wp_customize->remove_control('display_header_text');
+	$wp_customize->remove_control('header_textcolor');
 }
 add_action( 'customize_register', 'de_register', 11 );
 
@@ -285,7 +286,7 @@ function clean_customizer_text_css() {
 ?>
 	<style type="text/css">
 
-			.container #navbar-collapse a, .container .site-info a {
+			.container #navbar-collapse a, .container .site-info a, .container .site-info span, .navbar-header h1 {
 			<?php if ( get_theme_mod( 'header_text_color_setting' ) ) { ?>
 			color: <?php echo get_theme_mod( 'header_text_color_setting' ); ?>;
 			<?php } ?>
