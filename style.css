@@ -41,7 +41,7 @@ body {
 	word-wrap: break-word;
 	min-height: 100vh;
 	position: relative;
-	margin: 0;
+	margin: 0 auto;
 }
   
 .site-footer {
@@ -218,12 +218,11 @@ display: block;
 .entry-meta {
 	clear: both;
 }
-.container { 
-	border-right: 1px solid #eee; 
-	border-left: 1px solid #eee;
-	
+
+div.container.main-navigation, footer#colophon.site-footer{
 	width: 100%;
 }
+
 /*
  == Quick CSS styling tips ==
 
