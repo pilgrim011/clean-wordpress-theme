@@ -326,11 +326,12 @@ a:link{
 }
 .site-navigation{
 	background-color: steelblue;
+	
 }
 div.site-info{
 	
-	display: flex;
-	align-items: center;
+	padding-top: 20px;
+	text-align: center;
 }
 .page-title{
 	text-align: center;
@@ -340,4 +341,14 @@ div.site-info{
      padding-left: 0;  /*idem*/
      margin-right: auto;
      margin-left: auto;
+}
+img.custom-logo{
+	padding-top: 25px;
+}
+nav#navbar-collapse{
+	padding-top: 30px;
+}
+.navbar-header a h1{
+	padding-top: 15px;
+	text-transform: uppercase;
 }
