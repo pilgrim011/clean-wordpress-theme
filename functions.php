@@ -115,7 +115,7 @@ add_action( 'widgets_init', 'clean_widgets_init' );
  */
 function clean_scripts() {
 
-	// Import the necessary TK Bootstrap WP CSS additions
+	// Import the necessary clean Bootstrap WP CSS additions
 	wp_enqueue_style( 'clean-bootstrap-wp', THEME_DIR_URI . '/includes/css/bootstrap-wp.css' );
 
 	// load bootstrap css
@@ -313,7 +313,7 @@ function clean_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
+		// Include a plugin from the WordPress Plugin Repository.
 		array(
 			'name'      => 'Page Builder by SiteOrigin',
 			'slug'      => 'siteorigin-panels',

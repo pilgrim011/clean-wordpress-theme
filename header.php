@@ -24,7 +24,20 @@
 
 <header id="masthead" class="site-header" role="banner">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	
+<div class="container-fluid">
+		<div class="row">
+			<div class="site-header-inner col-sm-12">
+
+				<?php $header_image = get_header_image();
+				if ( ! empty( $header_image ) ) { ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+					</a>
+				<?php } // end if ( ! empty( $header_image ) ) ?>
+
+			</div>
+		</div>
+	</div><!-- .container -->
 </header><!-- #masthead -->
 
 <nav class="site-navigation">
@@ -81,7 +94,6 @@ if (!has_custom_logo()) {
 
 <div class="main-content">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			
 

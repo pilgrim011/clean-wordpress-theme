@@ -8,7 +8,7 @@ Version: 1.0
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: clean
-Tags: gray, light, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, sticky-post,  theme-options, threaded-comments, translation-ready
+Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, sticky-post,  theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 
@@ -218,9 +218,16 @@ display: block;
 
 div.container.main-navigation, footer#colophon.site-footer{
 	width: 100%;
-	min-height: 30px;
+	padding-right: 0; /*15px in bootstrap.css*/
+    padding-left: 0;  /*idem*/
+     margin-right: auto;
+	 margin-left: auto;
+	 display: flex;
+	 align-items: center;
 }
-
+.pull-left{
+	text-transform: uppercase;
+}
 /*
  == Quick CSS styling tips ==
 
@@ -278,7 +285,6 @@ nav .form-control {
 	
 	background-color: transparent;
 	border-color: transparent;
-	margin-top: 1em;
   }
 
   .container #navbar-collapse a{
@@ -295,6 +301,18 @@ nav .form-control {
 	background: #d65c14;
 	
 }
+
+ul#main-menu.nav.navbar-nav{margin:30px;}
+.menu-item a {padding: 15px 15px; display:inline-block;text-transform: uppercase;}
+
+li.menu-item {
+    display: inline;
+}
+
+
+
+
+
   .size-auto, 
 .size-full,
 .size-large,
@@ -304,8 +322,10 @@ nav .form-control {
 	height: auto;
 }
 .sidebar{
-	padding-top: 6em;
-}
+	text-align: right;
+	padding-top: 3%;
+	padding-left: 5%;
+	}
 a:link{
 	text-decoration: none;
 }
@@ -313,9 +333,16 @@ a:link{
 	background-color: steelblue;
 }
 div.site-info{
-	margin-top: 1em;
-	margin-bottom: 1em;
+	
+	display: flex;
+	align-items: center;
 }
 .page-title{
 	text-align: center;
+}
+.site-header-inner{
+	padding-right: 0; /*15px in bootstrap.css*/
+     padding-left: 0;  /*idem*/
+     margin-right: auto;
+     margin-left: auto;
 }
