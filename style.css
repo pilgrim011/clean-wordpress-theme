@@ -222,8 +222,6 @@ div.container.main-navigation, footer#colophon.site-footer{
     padding-left: 0;  /*idem*/
      margin-right: auto;
 	 margin-left: auto;
-	 display: flex;
-	 align-items: center;
 }
 .pull-left{
 	text-transform: uppercase;
@@ -302,12 +300,9 @@ nav .form-control {
 	
 }
 
-ul#main-menu.nav.navbar-nav{margin:30px;}
-.menu-item a {padding: 15px 15px; display:inline-block;text-transform: uppercase;}
 
-li.menu-item {
-    display: inline;
-}
+.menu-item a {text-transform: uppercase;}
+
 
 
 
