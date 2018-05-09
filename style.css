@@ -218,6 +218,7 @@ display: block;
 
 div.container.main-navigation, footer#colophon.site-footer{
 	width: 100%;
+	min-height: 30px;
 }
 
 /*
@@ -274,7 +275,7 @@ nav .form-control {
     display: inline;
 }
 .navbar {
-	min-height: 50px;
+	
 	background-color: transparent;
 	border-color: transparent;
 	margin-top: 1em;
@@ -310,4 +311,11 @@ a:link{
 }
 .site-navigation{
 	background-color: steelblue;
+}
+div.site-info{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.page-title{
+	text-align: center;
 }

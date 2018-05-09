@@ -1,17 +1,11 @@
 <?php
-/**
- * The Template for displaying all single posts.
- *
- * @package clean
- */
+/* Template Name: Page with sidebar */
+
 get_header(); ?>
 <div id="content" class="main-content-inner col-sm-12 col-md-8">
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php get_template_part( 'content', 'single' ); ?>
-
-		<?php // clean_content_nav( 'nav-below' ); ?>
-		<?php clean_pagination(); ?>
+		<?php get_template_part( 'content', 'page' ); ?>
 
 		<?php
 			// If comments are open or we have at least one comment, load up the comment template
@@ -20,6 +14,5 @@ get_header(); ?>
 		?>
 
 	<?php endwhile; // end of the loop. ?>
-
-<?php get_sidebar(); ?>
+    <?php get_sidebar(); ?>
 <?php get_footer(); ?>
