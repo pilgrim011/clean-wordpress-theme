@@ -47,7 +47,7 @@
 	<div class="row">
 	<div class="site-navigation-inner">
 		<div id = "remove-margin" class="navbar navbar-default">
-					<div class="navbar-header col-md-6 ">
+					<div class="navbar-header col-md-5">
 					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 							<span class="sr-only"><?php _e('Toggle navigation','clean') ?> </span>
@@ -57,15 +57,15 @@
 						</button>
 	
 				<!-- Your site title as branding in the menu -->
-				<a class="navbar-brand transform pull-left" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php the_custom_logo();?></a>
+				<a class="navbar-brand transform" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php the_custom_logo();?></a>
 <!-- No Custom Logo, just display the site's name -->
 <?php if (!has_custom_logo()) {?>
     ?>
-    <a class="navbar-brand transform pull-left" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+    <a class="navbar-brand transform" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
     <?php
 }?>
 </div>
-<div class="col-md-6"
+<div class="navbar-header col-md-7"
 					<!-- The WordPress Menu goes here -->
 					<?php wp_nav_menu(
 						array(

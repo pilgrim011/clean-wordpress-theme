@@ -73,10 +73,10 @@ function clean_setup() {
 
 	
 		$defaults = array(
-			'height'      => 50,
+			'height'      => 60,
 			'width'       => 150,
 			'flex-height' => false,
-			'flex-width'  => false,
+			'flex-width'  => true,
 			'header-text' => array( 'site-title', 'site-description' ),
 		);
 		add_theme_support( 'custom-logo', $defaults );
@@ -286,7 +286,7 @@ function clean_customizer_text_css() {
 ?>
 	<style type="text/css">
 
-			.container #navbar-collapse a, .container .site-info a, .container .site-info span, .navbar-header h1 {
+			.container #navbar-collapse a, .container .site-info a, .container .site-info span, a.navbar-brand.transform.pull-left {
 			<?php if ( get_theme_mod( 'header_text_color_setting' ) ) { ?>
 			color: <?php echo get_theme_mod( 'header_text_color_setting' ); ?>;
 			<?php } ?>

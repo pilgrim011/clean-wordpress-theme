@@ -349,8 +349,17 @@ div.site-info{
 	 width: 100%;
 }
 #remove-margin {
-	margin-bottom:0px;
+	margin-bottom: 0px;
 	}
 	#remove-cont-margin{
 		margin-bottom:-14px;
 	}
+a.navbar-brand.transform.pull-left{
+	color: white;
+}
+#main-menu{
+min-height: 60px;
+}
+nav#navbar-collapse{
+	margin-bottom:-4px;
+}
