@@ -73,10 +73,10 @@ function clean_setup() {
 
 	
 		$defaults = array(
-			'height'      => 55,
-			'width'       => 140,
+			'height'      => 50,
+			'width'       => 150,
 			'flex-height' => false,
-			'flex-width'  => true,
+			'flex-width'  => false,
 			'header-text' => array( 'site-title', 'site-description' ),
 		);
 		add_theme_support( 'custom-logo', $defaults );

@@ -216,14 +216,14 @@ display: block;
 	clear: both;
 }
 
-div.container.main-navigation, footer#colophon.site-footer{
+footer#colophon.site-footer{
 	width: 100%;
 	padding-right: 0; /*15px in bootstrap.css*/
     padding-left: 0;  /*idem*/
      margin-right: auto;
 	 margin-left: auto;
 }
-.pull-left{
+.transform{
 	text-transform: uppercase;
 }
 /*
@@ -308,6 +308,7 @@ nav .form-control {
 
 
 
+
   .size-auto, 
 .size-full,
 .size-large,
@@ -333,22 +334,23 @@ div.site-info{
 	padding-top: 20px;
 	text-align: center;
 }
-.page-title{
-	text-align: center;
-}
 .site-header-inner{
 	padding-right: 0; /*15px in bootstrap.css*/
      padding-left: 0;  /*idem*/
      margin-right: auto;
-     margin-left: auto;
+	 margin-left: auto;
+	 max-width: 100%;
 }
-img.custom-logo{
-	padding-top: 25px;
+.site-header-inner img{
+	padding-right: 0; /*15px in bootstrap.css*/
+    padding-left: 0;  /*idem*/
+     margin-right: auto;
+	 margin-left: auto;
+	 width: 100%;
 }
-nav#navbar-collapse{
-	padding-top: 30px;
-}
-.navbar-header a h1{
-	padding-top: 15px;
-	text-transform: uppercase;
-}
+#remove-margin {
+	margin-bottom:0px;
+	}
+	#remove-cont-margin{
+		margin-bottom:-14px;
+	}
