@@ -88,7 +88,7 @@ function clean_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	*/
 	register_nav_menus( array(
-		'primary'  => __( 'Header bottom menu', 'clean' ),
+		'primary'  => __( 'Primary menu', 'clean' ),
 		) );
 
 }
