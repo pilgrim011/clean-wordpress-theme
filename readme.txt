@@ -1,7 +1,7 @@
 Theme Name: clean
 Theme URI: https://www.tvojsajt.com/
 Author: Zoran Stanić
-Author URI: https://www.tvojsajt.com/
+Author URI: https://github.com/pilgrim011
 Description: Simple Wordpress theme based on underscores and tk starter themes with Bootstrap integrated
 Version: 0.1.0
 License: GNU General Public License v3.0 /
