@@ -286,7 +286,7 @@ function clean_customizer_text_css() {
 ?>
 	<style type="text/css">
 
-			.container #navbar-collapse a, .container .site-info a, .container .site-info span, a.navbar-brand.transform.pull-left {
+			.container #navbar-collapse a, .container .site-info a, .container .site-info span, a.navbar-brand.transform {
 			<?php if ( get_theme_mod( 'header_text_color_setting' ) ) { ?>
 			color: <?php echo get_theme_mod( 'header_text_color_setting' ); ?>;
 			<?php } ?>

@@ -319,7 +319,7 @@ nav .form-control {
 }
 .sidebar{
 	text-align: right;
-	padding-top: 3%;
+	margin-top: 7%;
 	padding-left: 5%;
 	}
 a:link{
@@ -354,12 +354,27 @@ div.site-info{
 	#remove-cont-margin{
 		margin-bottom:-14px;
 	}
-a.navbar-brand.transform.pull-left{
+a.navbar-brand.transform{
 	color: white;
+	padding-top: 20px;
 }
 #main-menu{
 min-height: 60px;
 }
 nav#navbar-collapse{
 	margin-bottom:-4px;
+}
+#main-menu li a{
+	text-align: center;
+}
+ul#main-menu.nav.navbar-nav, img.custom-logo{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+button.navbar-toggle{
+	margin-top: 30px;
+}
+div.navbar-header{
+	padding-top: 7px;
+	padding-bottom: 0px;
 }
