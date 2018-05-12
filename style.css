@@ -319,8 +319,8 @@ nav .form-control {
 }
 .sidebar{
 	text-align: right;
-	padding-top: 3%;
 	padding-left: 5%;
+	padding-top: 5%;
 	}
 a:link{
 	text-decoration: none;
@@ -351,15 +351,32 @@ div.site-info{
 #remove-margin {
 	margin-bottom: 0px;
 	}
-	#remove-cont-margin{
-		margin-bottom:-14px;
-	}
-a.navbar-brand.transform.pull-left{
+	
+a.navbar-brand.transform{
 	color: white;
 }
-#main-menu{
-min-height: 60px;
+
+
+
+@media only screen and (max-width: 500px) {
+    .collapse {
+        display: none;
+    }
 }
-nav#navbar-collapse{
-	margin-bottom:-4px;
+
+#main-menu ul li a {
+	text-align: center;
+}
+ul#main-menu.nav.navbar-nav{
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+img.custom-logo{
+	padding-top: 16px;
+	padding-bottom: 14px;
+}
+
+#navbar-collapse{
+	padding-top: 14px;
+	padding-bottom: 14px;
 }

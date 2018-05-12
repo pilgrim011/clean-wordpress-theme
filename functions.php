@@ -73,9 +73,9 @@ function clean_setup() {
 
 	
 		$defaults = array(
-			'height'      => 60,
-			'width'       => 150,
-			'flex-height' => false,
+			'height'      => 50,
+			'width'       => 120,
+			'flex-height' => true,
 			'flex-width'  => true,
 			'header-text' => array( 'site-title', 'site-description' ),
 		);

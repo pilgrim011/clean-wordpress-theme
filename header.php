@@ -43,11 +43,11 @@
 
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 <nav class="site-navigation">
-	<div id = "remove-cont-margin" class="container">
+	<div id="navbar-collapse" class="container">
 	<div class="row">
-	<div class="site-navigation-inner">
+	<div class="site-navigation-inner col-md-12">
 		<div id = "remove-margin" class="navbar navbar-default">
-					<div class="navbar-header col-md-5">
+					<div class="navbar-header">
 					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 							<span class="sr-only"><?php _e('Toggle navigation','clean') ?> </span>
@@ -65,7 +65,7 @@
     <?php
 }?>
 </div>
-<div class="navbar-header col-md-7"
+
 					<!-- The WordPress Menu goes here -->
 					<?php wp_nav_menu(
 						array(
@@ -80,7 +80,7 @@
 							'walker' 			=> new wp_bootstrap_navwalker()
 						)
 					); ?>
-</div>
+
 				</div><!-- .navbar -->
 		</div>
 		</div>
