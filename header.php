@@ -44,10 +44,10 @@
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 <nav class="site-navigation">
 	<div id = "remove-cont-margin" class="container">
-	<div class="row">
-	<div class="site-navigation-inner">
+	<div id="header-row" class="row">
+	<div class="site-navigation-inner col-sm-12">
 		<div id = "remove-margin" class="navbar navbar-default">
-					<div class="navbar-header col-md-5">
+					<div class="navbar-header">
 					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 							<span class="sr-only"><?php _e('Toggle navigation','clean') ?> </span>
@@ -55,17 +55,17 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-	
+						
 				<!-- Your site title as branding in the menu -->
 				<a class="navbar-brand transform" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php the_custom_logo();?></a>
 <!-- No Custom Logo, just display the site's name -->
 <?php if (!has_custom_logo()) {?>
-    ?>
-    <a class="navbar-brand transform" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+	?>
+		<a class="navbar-brand transform" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
     <?php
 }?>
 </div>
-<div class="navbar-header col-md-7"
+
 					<!-- The WordPress Menu goes here -->
 					<?php wp_nav_menu(
 						array(
@@ -73,15 +73,15 @@
 							'depth'             => 2,
 							'container'         => 'nav',
 							'container_id'      => 'navbar-collapse',
-							'container_class'   => 'collapse navbar-collapse',
+							'container_class'   => 'collapse navbar-collapse pull-right',
 							'menu_class' 		=> 'nav navbar-nav',
 							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
 							'menu_id'			=> 'main-menu',
 							'walker' 			=> new wp_bootstrap_navwalker()
 						)
 					); ?>
-</div>
 				</div><!-- .navbar -->
+		</div>
 		</div>
 		</div>
 	</div><!-- .container -->

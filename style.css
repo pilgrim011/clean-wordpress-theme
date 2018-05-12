@@ -1,9 +1,9 @@
 /*
 Theme Name: clean
 Theme URI: https://www.tvojsajt.com/
-Author: Zoran Stanic
+Author: Zoran Stanić
 Author URI: https://www.tvojsajt.com/
-Description: Simple Wordpress theme based on underscores and tk starter themes with Bootstrap integrated
+Description: Clean is a simple theme primarily intended for business presentations.  It is a responsive theme with Bootstrap integrated. Clean offers plenty of customization like full color control, layout control, logo upload, header image, header and footer color control and much more. 
 Version: 0.1.0
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -348,36 +348,16 @@ div.site-info{
 	 margin-left: auto;
 	 width: 100%;
 }
-#remove-margin {
-	margin-bottom: 0px;
-	}
-	#remove-cont-margin{
-		margin-bottom:-14px;
-	}
 a.navbar-brand.transform{
 	color: white;
-	padding-top: 20px;
+	text-align: left;
+	
 }
-#main-menu{
-min-height: 60px;
-}
-nav#navbar-collapse{
-	margin-bottom:-4px;
-}
+
 #main-menu li a{
 	text-align: center;
 }
-ul#main-menu.nav.navbar-nav, img.custom-logo{
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-button.navbar-toggle{
-	margin-top: 30px;
-}
-div.navbar-header{
-	padding-top: 7px;
-	padding-bottom: 0px;
-}
+
 h1,h2,h3,h4,h5,h6{
 	text-align: center;
 }
@@ -395,4 +375,10 @@ ul#recentcomments{
 }
 .widget-title{
 	text-align: left;
+}
+#remove-margin{
+	margin-bottom: -14px;
+}
+ul#main-menu{
+	padding-left: 10px;
 }

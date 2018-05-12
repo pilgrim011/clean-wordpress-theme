@@ -1,12 +1,12 @@
 Theme Name: clean
-Theme URI: https://www.tvojsajt.com/izrada-sajta/
-Author: Zoran Stanic
+Theme URI: https://www.tvojsajt.com/
+Author: Zoran Stanić
 Author URI: https://www.tvojsajt.com/
 Description: Simple Wordpress theme based on underscores and tk starter themes with Bootstrap integrated
-Version: 1.0
+Version: 0.1.0
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: gray, light, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, sticky-post,  theme-options, threaded-comments, translation-ready
+Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, sticky-post,  theme-options, threaded-comments, translation-ready, featured-image-header, full-width-template
 
 *************************************************************
 Credits:

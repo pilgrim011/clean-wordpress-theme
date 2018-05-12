@@ -73,7 +73,7 @@ function clean_setup() {
 
 	
 		$defaults = array(
-			'height'      => 60,
+			'height'      => 50,
 			'width'       => 150,
 			'flex-height' => false,
 			'flex-width'  => true,
@@ -286,7 +286,7 @@ function clean_customizer_text_css() {
 ?>
 	<style type="text/css">
 
-			.container #navbar-collapse a, .container .site-info a, .container .site-info span, a.navbar-brand.transform {
+			.container #navbar-collapse a, .container .site-info a, .container .site-info span, a.navbar-brand.transform,p.site-description.lead {
 			<?php if ( get_theme_mod( 'header_text_color_setting' ) ) { ?>
 			color: <?php echo get_theme_mod( 'header_text_color_setting' ); ?>;
 			<?php } ?>
