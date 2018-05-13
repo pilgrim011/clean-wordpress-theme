@@ -13,46 +13,46 @@
 	<?php } // if ( ! empty( $header_image ) ) ?>
 
  *
- * @package clean
+ * @package simplybusiness
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses clean_header_style()
- * @uses clean_admin_header_style()
- * @uses clean_admin_header_image()
+ * @uses simplybusiness_header_style()
+ * @uses simplybusiness_admin_header_style()
+ * @uses simplybusiness_admin_header_image()
  *
- * @package clean
+ * @package simplybusiness
  */
-function clean_custom_header_setup() {
+function simplybusiness_custom_header_setup() {
 	if ( function_exists( 'add_theme_support' ) ) {
-		add_theme_support( 'custom-header', apply_filters( 'clean_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'simplybusiness_custom_header_args', array(
 			'default-image'          => '',
 			'default-text-color'     => '000',
 			'width'                  => 0,
 			'height'                 => 0,
 			'flex-height'            => true,
 			'flex-width'             => true,
-			'wp-head-callback'       => 'clean_header_style',
-			'admin-head-callback'    => 'clean_admin_header_style',
-			'admin-preview-callback' => 'clean_admin_header_image',
+			'wp-head-callback'       => 'simplybusiness_header_style',
+			'admin-head-callback'    => 'simplybusiness_admin_header_style',
+			'admin-preview-callback' => 'simplybusiness_admin_header_image',
 		) ) );
 	}
 }
-add_action( 'after_setup_theme', 'clean_custom_header_setup' );
+add_action( 'after_setup_theme', 'simplybusiness_custom_header_setup' );
 
-if ( ! function_exists( 'clean_header_style' ) ) :
+if ( ! function_exists( 'simplybusiness_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see clean_custom_header_setup().
+ * @see simplybusiness_custom_header_setup().
  */
-function clean_header_style() {
+function simplybusiness_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'clean') or any hex value
+	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'simplybusiness') or any hex value
 	if ( HEADER_TEXTCOLOR == $header_text_color )
 		return;
 
@@ -61,7 +61,7 @@ function clean_header_style() {
 	<style type="text/css">
 	<?php
 		// Has the text been hidden?
-		if ( 'clean' == $header_text_color ) :
+		if ( 'simplybusiness' == $header_text_color ) :
 	?>
 		.site-title,
 		.site-description {
@@ -80,15 +80,15 @@ function clean_header_style() {
 	</style>
 	<?php
 }
-endif; // clean_header_style
+endif; // simplybusiness_header_style
 
-if ( ! function_exists( 'clean_admin_header_style' ) ) :
+if ( ! function_exists( 'simplybusiness_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see clean_custom_header_setup().
+ * @see simplybusiness_custom_header_setup().
  */
-function clean_admin_header_style() {
+function simplybusiness_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -108,15 +108,15 @@ function clean_admin_header_style() {
 	</style>
 <?php
 }
-endif; // clean_admin_header_style
+endif; // simplybusiness_admin_header_style
 
-if ( ! function_exists( 'clean_admin_header_image' ) ) :
+if ( ! function_exists( 'simplybusiness_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see clean_custom_header_setup().
+ * @see simplybusiness_custom_header_setup().
  */
-function clean_admin_header_image() {
+function simplybusiness_admin_header_image() {
 	$style        = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 	$header_image = get_header_image();
 ?>
@@ -129,4 +129,4 @@ function clean_admin_header_image() {
 	</div>
 <?php
 }
-endif; // clean_admin_header_image
+endif; // simplybusiness_admin_header_image

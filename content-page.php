@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package clean
+ * @package simplybusiness
  */
 ?>
 
@@ -13,7 +13,7 @@
 			<?php the_post_thumbnail(); ?>
 		</div>
 		<?php the_content(); ?>
-		<?php clean_link_pages(); ?>
+		<?php simplybusiness_link_pages(); ?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'clean' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', 'simplybusiness' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->

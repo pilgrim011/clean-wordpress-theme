@@ -10,8 +10,8 @@ get_header(); ?>
 
 		<?php get_template_part( 'content', 'single' ); ?>
 
-		<?php // clean_content_nav( 'nav-below' ); ?>
-		<?php clean_pagination(); ?>
+		<?php // simplybusiness_content_nav( 'nav-below' ); ?>
+		<?php simplybusiness_pagination(); ?>
 
 		<?php
 			// If comments are open or we have at least one comment, load up the comment template

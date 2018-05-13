@@ -1,9 +1,9 @@
-Theme Name: clean
+﻿Theme Name: simplybusiness
 Theme URI: https://www.tvojsajt.com/
 Author: Zoran Stanić
 Author URI: https://github.com/pilgrim011
 Description: Simple Wordpress theme based on underscores and tk starter themes with Bootstrap integrated
-Version: 0.1.0
+Version: 1.0.1
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, sticky-post,  theme-options, threaded-comments, translation-ready, featured-image-header, full-width-template
@@ -31,12 +31,12 @@ Credits:
 
 *************************************************************
 
-The clean Project on Github - https://github.com/pilgrim011/clean-wordpress-theme
+The simplybusiness Project on Github - https://github.com/pilgrim011/simplybusiness-wordpress-theme
 
 *************************************************************
 
 
-Thanks for using clean Theme.
+Thanks for using simplybusiness Theme.
 We hope you enjoy it!
 
 *************************************************************

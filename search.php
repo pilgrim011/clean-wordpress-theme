@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package clean
+ * @package simplybusiness
  */
 
 get_header(); ?>
@@ -10,7 +10,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
 		<header>
-			<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'clean' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+			<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'simplybusiness' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 		</header><!-- .page-header -->
 
 		<?php // start the loop. ?>
@@ -20,7 +20,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php clean_pagination(); ?>
+		<?php simplybusiness_pagination(); ?>
 
 	<?php else : ?>
 

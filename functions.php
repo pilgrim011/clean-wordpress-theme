@@ -1,8 +1,8 @@
 <?php
 /**
- * clean functions and definitions
+ * simplybusiness functions and definitions
  *
- * @package clean
+ * @package simplybusiness
  */
  
  /**
@@ -17,7 +17,7 @@
 if ( ! isset( $content_width ) )
 	$content_width = 750; /* pixels */
 
-if ( ! function_exists( 'clean_setup' ) ) :
+if ( ! function_exists( 'simplybusiness_setup' ) ) :
 /**
  * Set up theme defaults and register support for various WordPress features.
  *
@@ -25,7 +25,7 @@ if ( ! function_exists( 'clean_setup' ) ) :
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  */
-function clean_setup() {
+function simplybusiness_setup() {
 	global $cap, $content_width;
 
 	// Add html5 behavior for some theme elements
@@ -54,7 +54,7 @@ function clean_setup() {
 	/**
 	 * Setup the WordPress core custom background feature.
 	*/
-	add_theme_support( 'custom-background', apply_filters( 'clean_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'simplybusiness_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 		) ) );
@@ -66,8 +66,8 @@ function clean_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on clean, use a find and replace
-	 * to change 'clean' to the name of your theme in all the template files
+	 * If you're building a theme based on simplybusiness, use a find and replace
+	 * to change 'simplybusiness' to the name of your theme in all the template files
 	*/
 
 
@@ -82,25 +82,25 @@ function clean_setup() {
 		add_theme_support( 'custom-logo', $defaults );
 	
 
-	load_theme_textdomain( 'clean', THEME_DIR_PATH . '/languages' );
+	load_theme_textdomain( 'simplybusiness', THEME_DIR_PATH . '/languages' );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	*/
 	register_nav_menus( array(
-		'primary'  => __( 'Primary menu', 'clean' ),
+		'primary'  => __( 'Primary menu', 'simplybusiness' ),
 		) );
 
 }
-endif; // clean_setup
-add_action( 'after_setup_theme', 'clean_setup' );
+endif; // simplybusiness_setup
+add_action( 'after_setup_theme', 'simplybusiness_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-function clean_widgets_init() {
+function simplybusiness_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'clean' ),
+		'name'          => __( 'Sidebar', 'simplybusiness' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -108,46 +108,46 @@ function clean_widgets_init() {
 		'after_title'   => '</h3>',
 		) );
 }
-add_action( 'widgets_init', 'clean_widgets_init' );
+add_action( 'widgets_init', 'simplybusiness_widgets_init' );
 
 /**
  * Enqueue scripts and styles
  */
-function clean_scripts() {
+function simplybusiness_scripts() {
 
-	// Import the necessary clean Bootstrap WP CSS additions
-	wp_enqueue_style( 'clean-bootstrap-wp', THEME_DIR_URI . '/includes/css/bootstrap-wp.css' );
+	// Import the necessary simplybusiness Bootstrap WP CSS additions
+	wp_enqueue_style( 'simplybusiness-bootstrap-wp', THEME_DIR_URI . '/includes/css/bootstrap-wp.css' );
 
 	// load bootstrap css
-	wp_enqueue_style( 'clean-bootstrap', THEME_DIR_URI . '/includes/resources/bootstrap/css/bootstrap.min.css' );
+	wp_enqueue_style( 'simplybusiness-bootstrap', THEME_DIR_URI . '/includes/resources/bootstrap/css/bootstrap.min.css' );
 
 	// load Font Awesome css
-	wp_enqueue_style( 'clean-font-awesome', THEME_DIR_URI . '/includes/css/font-awesome.min.css', false, '4.1.0' );
+	wp_enqueue_style( 'simplybusiness-font-awesome', THEME_DIR_URI . '/includes/css/font-awesome.min.css', false, '4.1.0' );
 
-	// load clean styles
-	wp_enqueue_style( 'clean-style', get_stylesheet_uri() );
+	// load simplybusiness styles
+	wp_enqueue_style( 'simplybusiness-style', get_stylesheet_uri() );
    // Modify our styles registration:
-	$custom_css = clean_get_customizer_css();
-	wp_add_inline_style( 'clean-style', $custom_css );
+	$custom_css = simplybusiness_get_customizer_css();
+	wp_add_inline_style( 'simplybusiness-style', $custom_css );
 
 	// load bootstrap js
-	wp_enqueue_script('clean-bootstrapjs', THEME_DIR_URI . '/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
+	wp_enqueue_script('simplybusiness-bootstrapjs', THEME_DIR_URI . '/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
 
 	// load bootstrap wp js
-	wp_enqueue_script( 'clean-bootstrapwp', THEME_DIR_URI . '/includes/js/bootstrap-wp.js', array('jquery') );
+	wp_enqueue_script( 'simplybusiness-bootstrapwp', THEME_DIR_URI . '/includes/js/bootstrap-wp.js', array('jquery') );
 
-	wp_enqueue_script( 'clean-skip-link-focus-fix', THEME_DIR_URI . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'simplybusiness-skip-link-focus-fix', THEME_DIR_URI . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'clean-keyboard-image-navigation', THEME_DIR_URI . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		wp_enqueue_script( 'simplybusiness-keyboard-image-navigation', THEME_DIR_URI . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'clean_scripts' );
+add_action( 'wp_enqueue_scripts', 'simplybusiness_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -197,7 +197,7 @@ function de_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'de_register', 11 );
 
-function clean_get_customizer_css() {
+function simplybusiness_get_customizer_css() {
     ob_start();
 
     $text_color = get_theme_mod( 'text_color', '' );
@@ -262,24 +262,24 @@ function clean_get_customizer_css() {
     return $css;
   }
 
-  function clean_customizer_css() {
+  function simplybusiness_customizer_css() {
 	if ( ! get_theme_mod( 'header_background_color_setting' ) && ! get_theme_mod( 'header_text_color_setting' )) {
 		return;
 	}
 ?>
 	<style type="text/css">
-		.site-navigation, .site-footer {
+		.site-navigation, footer#colophon.site-footer {
 			<?php if ( get_theme_mod( 'header_background_color_setting' ) ) { ?>
 			background-color: <?php echo get_theme_mod( 'header_background_color_setting' ); ?>;
 			<?php } ?>
 		}
 	</style>
 <?php
-} // end clean_customizer_css
-add_action( 'wp_head', 'clean_customizer_css');
-add_action( 'wp_footer', 'clean_customizer_css');
+} // end simplybusiness_customizer_css
+add_action( 'wp_head', 'simplybusiness_customizer_css');
+add_action( 'wp_footer', 'simplybusiness_customizer_css');
 
-function clean_customizer_text_css() {
+function simplybusiness_customizer_text_css() {
 	if ( ! get_theme_mod( 'header_text_color_setting' )) {
 		return;
 	}
@@ -293,20 +293,20 @@ function clean_customizer_text_css() {
 		}
 	</style>
 <?php
-} // end clean_customizer_css
-add_action( 'wp_head', 'clean_customizer_text_css');
-add_action( 'wp_footer', 'clean_customizer_text_css');
+} // end simplybusiness_customizer_css
+add_action( 'wp_head', 'simplybusiness_customizer_text_css');
+add_action( 'wp_footer', 'simplybusiness_customizer_text_css');
 
 //REQUIRED PLUGIN - include the TGM_Plugin_Activation class.
 
 require_once get_template_directory() . ('/includes/class-tgm-plugin-activation.php');
-add_action( 'tgmpa_register', 'clean_register_required_plugins' );
+add_action( 'tgmpa_register', 'simplybusiness_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
  *
  */
-function clean_register_required_plugins() {
+function simplybusiness_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.

@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package clean
+ * @package simplybusiness
  */
 
-if ( ! function_exists( 'clean_content_nav' ) ) :
+if ( ! function_exists( 'simplybusiness_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  */
-function clean_content_nav( $nav_id ) {
+function simplybusiness_content_nav( $nav_id ) {
 	global $wp_query, $post;
 
 	// Don't print empty markup on single pages if there's nowhere to navigate.
@@ -31,22 +31,22 @@ function clean_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'clean' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'simplybusiness' ); ?></h1>
 		<ul class="pager">
 
 		<?php if ( is_single() ) : // navigation links for single posts ?>
 
-			<?php previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'clean' ) . '</span> %title' ); ?>
-			<?php next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'clean' ) . '</span>' ); ?>
+			<?php previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'simplybusiness' ) . '</span> %title' ); ?>
+			<?php next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'simplybusiness' ) . '</span>' ); ?>
 
 		<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<li class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'clean' ) ); ?></li>
+			<li class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'simplybusiness' ) ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<li class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'clean' ) ); ?></li>
+			<li class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'simplybusiness' ) ); ?></li>
 			<?php endif; ?>
 
 		<?php endif; ?>
@@ -55,22 +55,22 @@ function clean_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
-endif; // clean_content_nav
+endif; // simplybusiness_content_nav
 
-if ( ! function_exists( 'clean_comment' ) ) :
+if ( ! function_exists( 'simplybusiness_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-function clean_comment( $comment, $args, $depth ) {
+function simplybusiness_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 
 	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( 'media' ); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'clean' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'clean' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php _e( 'Pingback:', 'simplybusiness' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'simplybusiness' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -85,19 +85,19 @@ function clean_comment( $comment, $args, $depth ) {
 				<div class="media-body-wrap panel panel-default">
 
 					<div class="panel-heading">
-						<h5 class="media-heading"><?php printf( __( '%s <span class="says">says:</span>', 'clean' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
+						<h5 class="media-heading"><?php printf( __( '%s <span class="says">says:</span>', 'simplybusiness' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
 						<div class="comment-meta">
 							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 								<time datetime="<?php comment_time( 'c' ); ?>">
-									<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'clean' ), get_comment_date(), get_comment_time() ); ?>
+									<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'simplybusiness' ), get_comment_date(), get_comment_time() ); ?>
 								</time>
 							</a>
-							<?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'clean' ), '<span class="edit-link">', '</span>' ); ?>
+							<?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'simplybusiness' ), '<span class="edit-link">', '</span>' ); ?>
 						</div>
 					</div>
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'clean' ); ?></p>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'simplybusiness' ); ?></p>
 					<?php endif; ?>
 
 					<div class="comment-content panel-body">
@@ -124,15 +124,15 @@ function clean_comment( $comment, $args, $depth ) {
 	<?php
 	endif;
 }
-endif; // ends check for clean_comment()
+endif; // ends check for simplybusiness_comment()
 
-if ( ! function_exists( 'clean_the_attached_image' ) ) :
+if ( ! function_exists( 'simplybusiness_the_attached_image' ) ) :
 /**
  * Prints the attached image with a link to the next attached image.
  */
-function clean_the_attached_image() {
+function simplybusiness_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( 'clean_attachment_size', array( 1200, 1200 ) );
+	$attachment_size     = apply_filters( 'simplybusiness_attachment_size', array( 1200, 1200 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
@@ -178,11 +178,11 @@ function clean_the_attached_image() {
 }
 endif;
 
-if ( ! function_exists( 'clean_posted_on' ) ) :
+if ( ! function_exists( 'simplybusiness_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function clean_posted_on() {
+function simplybusiness_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 
 	$time_string = sprintf( $time_string,
@@ -207,14 +207,14 @@ function clean_posted_on() {
 			esc_attr( get_the_time() ),
 			$time_string_update
 		);
-		$time_string .= __(', updated on ', 'clean') . $time_string_update;
+		$time_string .= __(', updated on ', 'simplybusiness') . $time_string_update;
 	}
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'clean' ),
+	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'simplybusiness' ),
 		$time_string,
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'clean' ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'simplybusiness' ), get_the_author() ) ),
 			esc_html( get_the_author() )
 		)
 	);
@@ -224,7 +224,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  */
-function clean_categorized_blog() {
+function simplybusiness_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
@@ -238,26 +238,26 @@ function clean_categorized_blog() {
 	}
 
 	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so clean_categorized_blog should return true
+		// This blog has more than 1 category so simplybusiness_categorized_blog should return true
 		return true;
 	} else {
-		// This blog has only 1 category so clean_categorized_blog should return false
+		// This blog has only 1 category so simplybusiness_categorized_blog should return false
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in clean_categorized_blog
+ * Flush out the transients used in simplybusiness_categorized_blog
  */
-function clean_category_transient_flusher() {
+function simplybusiness_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
-add_action( 'edit_category', 'clean_category_transient_flusher' );
-add_action( 'save_post',     'clean_category_transient_flusher' );
+add_action( 'edit_category', 'simplybusiness_category_transient_flusher' );
+add_action( 'save_post',     'simplybusiness_category_transient_flusher' );
 
 
-// clean Bootstrap pagination function
+// simplybusiness Bootstrap pagination function
 // original: http://fellowtuts.com/wordpress/bootstrap-3-pagination-in-wordpress/
 /**
  * 
@@ -266,7 +266,7 @@ add_action( 'save_post',     'clean_category_transient_flusher' );
  * @param int $pages
  * @param type $range
  */
-function clean_pagination() {
+function simplybusiness_pagination() {
     global $paged, $wp_query;
 
     if (empty($paged)) {
@@ -287,15 +287,15 @@ function clean_pagination() {
         <ul class="pagination">
             <li class="disabled hidden-xs">
                 <span>
-                    <span aria-hidden="true"><?php _e('Page', 'clean'); ?> <?php echo $paged; ?> <?php _e('of', 'clean'); ?> <?php echo $pages; ?></span>
+                    <span aria-hidden="true"><?php _e('Page', 'simplybusiness'); ?> <?php echo $paged; ?> <?php _e('of', 'simplybusiness'); ?> <?php echo $pages; ?></span>
                 </span>
             </li>
-            <li><a href="<?php echo get_pagenum_link(1); ?>" aria-label="First">&laquo;<span class="hidden-xs"> <?php _e('First', 'clean'); ?></span></a></li>
+            <li><a href="<?php echo get_pagenum_link(1); ?>" aria-label="First">&laquo;<span class="hidden-xs"> <?php _e('First', 'simplybusiness'); ?></span></a></li>
 
             <?php if ($paged == 1): ?>
-            <li class="disabled"><span>&lsaquo;<span class="hidden-xs aria-hidden"> <?php _e('Previous', 'clean'); ?></span></span></li>
+            <li class="disabled"><span>&lsaquo;<span class="hidden-xs aria-hidden"> <?php _e('Previous', 'simplybusiness'); ?></span></span></li>
             <?php else: ?>
-                <li><a href="<?php echo get_pagenum_link($paged-1); ?>" aria-label="Previous">&lsaquo;<span class="hidden-xs"> <?php _e('Previous', 'clean'); ?></span></a></li>
+                <li><a href="<?php echo get_pagenum_link($paged-1); ?>" aria-label="Previous">&lsaquo;<span class="hidden-xs"> <?php _e('Previous', 'simplybusiness'); ?></span></a></li>
             <?php endif; ?>
 
             <?php $start_page = min(max($paged - 2, 1), max($pages - 4, 1)); ?>
@@ -310,18 +310,18 @@ function clean_pagination() {
             <?php endfor; ?>
 
             <?php if ($paged == $pages): ?>
-                <li class="disabled"><span><span class="hidden-xs aria-hidden"><?php _e('Next', 'clean'); ?> </span>&rsaquo;</span></li>
+                <li class="disabled"><span><span class="hidden-xs aria-hidden"><?php _e('Next', 'simplybusiness'); ?> </span>&rsaquo;</span></li>
             <?php else: ?>
-                <li><a href="<?php echo get_pagenum_link($paged+1); ?>" aria-label="Next"><span class="hidden-xs"><?php _e('Next', 'clean'); ?> </span>&rsaquo;</a></li>
+                <li><a href="<?php echo get_pagenum_link($paged+1); ?>" aria-label="Next"><span class="hidden-xs"><?php _e('Next', 'simplybusiness'); ?> </span>&rsaquo;</a></li>
             <?php endif; ?>
 
-            <li><a href="<?php echo get_pagenum_link($pages); ?>" aria-label='Last'><span class='hidden-xs'><?php _e('Last', 'clean'); ?> </span>&raquo;</a></li>
+            <li><a href="<?php echo get_pagenum_link($pages); ?>" aria-label='Last'><span class='hidden-xs'><?php _e('Last', 'simplybusiness'); ?> </span>&raquo;</a></li>
             <li>
                 <form method="get" id="tk-pagination" class="tk-page-nav">
                     <div class="input-group">
                         <input oninput="if(!jQuery(this)[0].checkValidity()) {jQuery('#tk-pagination').find(':submit').click();};" type="number" name="paged" min="1" max="<?php echo $pages; ?>" value="<?php echo $paged; ?>" class="form-control text-right" style="width: <?php echo $input_width; ?>em;">
                         <span class="input-group-btn">
-                            <input type="submit" value="<?php _e('Go to', 'clean'); ?>" class="btn btn-success">
+                            <input type="submit" value="<?php _e('Go to', 'simplybusiness'); ?>" class="btn btn-success">
                         </span>
                       </div>
                 </form>
@@ -334,11 +334,11 @@ function clean_pagination() {
 }
 
 /**
- * clean_link_pages()
+ * simplybusiness_link_pages()
  * Creates bootstraped pagination for paginated posts
  * 
  */
-function clean_link_pages() {
+function simplybusiness_link_pages() {
     global $numpages, $page, $post;
 
     if (1 != $numpages):
@@ -349,14 +349,14 @@ function clean_link_pages() {
         <ul class="pagination">
             <li class="disabled hidden-xs">
                 <span>
-                    <span aria-hidden="true"><?php _e('Page', 'clean'); ?> <?php echo $page; ?> <?php _e('of', 'clean'); ?> <?php echo $numpages; ?></span>
+                    <span aria-hidden="true"><?php _e('Page', 'simplybusiness'); ?> <?php echo $page; ?> <?php _e('of', 'simplybusiness'); ?> <?php echo $numpages; ?></span>
                 </span>
             </li>
-            <li><?php echo clean_link_page(1, 'First'); ?>&laquo;<span class="hidden-xs"> <?php _e('First', 'clean'); ?></span></a></li>
+            <li><?php echo simplybusiness_link_page(1, 'First'); ?>&laquo;<span class="hidden-xs"> <?php _e('First', 'simplybusiness'); ?></span></a></li>
             <?php if ($page == 1): ?>
-                <li class="disabled"><span>&lsaquo;<span class="hidden-xs aria-hidden"> <?php _e('Previous', 'clean'); ?></span></span></li>
+                <li class="disabled"><span>&lsaquo;<span class="hidden-xs aria-hidden"> <?php _e('Previous', 'simplybusiness'); ?></span></span></li>
             <?php else: ?>
-                <li><?php echo clean_link_page($page - 1, 'Previous'); ?>&lsaquo;<span class="hidden-xs"> <?php _e('Previous', 'clean'); ?></span></a></li>                        
+                <li><?php echo simplybusiness_link_page($page - 1, 'Previous'); ?>&lsaquo;<span class="hidden-xs"> <?php _e('Previous', 'simplybusiness'); ?></span></a></li>                        
             <?php endif; ?>
 
             <?php $start_page = min(max($page - 2, 1), max($numpages - 4, 1)); ?>
@@ -368,22 +368,22 @@ function clean_link_pages() {
                         <span><?php echo $i; ?><span class="sr-only">(current)</span></span>
                     </li>
                 <?php else: ?>
-                    <li><?php echo clean_link_page($i) . $i . '</a>'; ?></li>
+                    <li><?php echo simplybusiness_link_page($i) . $i . '</a>'; ?></li>
                 <?php endif; ?>
             <?php endfor; ?>
 
             <?php if ($page == $numpages): ?>
-                <li class="disabled"><span><span class="hidden-xs aria-hidden"><?php _e('Next', 'clean'); ?> </span>&rsaquo;</span></li>
+                <li class="disabled"><span><span class="hidden-xs aria-hidden"><?php _e('Next', 'simplybusiness'); ?> </span>&rsaquo;</span></li>
             <?php else: ?>
-                <li><?php echo clean_link_page($page + 1, 'Next'); ?><span class="hidden-xs"><?php _e('Next', 'clean'); ?> </span>&rsaquo;</a></li>
+                <li><?php echo simplybusiness_link_page($page + 1, 'Next'); ?><span class="hidden-xs"><?php _e('Next', 'simplybusiness'); ?> </span>&rsaquo;</a></li>
             <?php endif; ?>
-            <li><?php echo clean_link_page($numpages, 'Last'); ?><span class="hidden-xs"><?php _e('Last', 'clean'); ?> </span>&raquo;</a></li>
+            <li><?php echo simplybusiness_link_page($numpages, 'Last'); ?><span class="hidden-xs"><?php _e('Last', 'simplybusiness'); ?> </span>&raquo;</a></li>
             <li>
                 <form action="<?php echo get_permalink($post->ID); ?>" method="get" class="tk-page-nav" id="tk-paging-<?php echo $post->ID; ?>">
                     <div class="input-group">
                         <input oninput="if(!jQuery(this)[0].checkValidity()) {jQuery('#tk-paging-<?php echo $post->ID; ?>').find(':submit').click();};" type="number" name="page" min="1" max="<?php echo $numpages; ?>" value="<?php echo $page; ?>" class="form-control text-right" style="width: <?php echo $input_width; ?>em;">
                         <span class="input-group-btn">
-                            <input type="submit" value="<?php _e('Go to', 'clean'); ?>" class="btn btn-success">
+                            <input type="submit" value="<?php _e('Go to', 'simplybusiness'); ?>" class="btn btn-success">
                         </span>
                       </div>
                 </form>
@@ -396,7 +396,7 @@ function clean_link_pages() {
 }
 
 /**
- * clean_link_page
+ * simplybusiness_link_page
  * 
  * Customized _wp_link_page from wp-includes/post_template.php
  * 
@@ -408,7 +408,7 @@ function clean_link_pages() {
  * @param string $class
  * @return string
  */
-function clean_link_page($i, $aria_label = '', $class = '') {
+function simplybusiness_link_page($i, $aria_label = '', $class = '') {
     global $wp_rewrite, $page, $numpages;
     $post       = get_post();
     $query_args = array();

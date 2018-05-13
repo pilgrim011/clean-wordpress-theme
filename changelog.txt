@@ -1,0 +1,6 @@
+Version 1.0.1
+Released: May 13, 2018
+
+- Fixed an ugly mistake caused by using search and replace to adjust theme name, since this theme had the same name as the one already in WordPress.org repo.
+- Removed forgotten - unnecassary closing php tag from header.php. 
+- Adjusted some default background color properties.

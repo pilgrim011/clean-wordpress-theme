@@ -4,10 +4,10 @@
  *
  * The area of the page that contains both current comments
  * and the comment form. The actual display of comments is
- * handled by a callback to clean_comment() which is
+ * handled by a callback to simplybusiness_comment() which is
  * located in the includes/template-tags.php file.
  *
- * @package clean
+ * @package simplybusiness
  */
 
 /*
@@ -27,7 +27,7 @@ if ( post_password_required() )
 		<header>
 			<h2 class="comments-title">
 				<?php
-					printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'clean' ),
+					printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'simplybusiness' ),
 						number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 				?>
 			</h2>
@@ -35,10 +35,10 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h5 class="screen-reader-text"><?php _e( 'Comment navigation', 'clean' ); ?></h5>
+			<h5 class="screen-reader-text"><?php _e( 'Comment navigation', 'simplybusiness' ); ?></h5>
 			<ul class="pager">
-				<li class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'clean' ) ); ?></li>
-				<li class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'clean' ) ); ?></li>
+				<li class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'simplybusiness' ) ); ?></li>
+				<li class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'simplybusiness' ) ); ?></li>
 			</ul>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
@@ -46,20 +46,20 @@ if ( post_password_required() )
 		<ol class="comment-list media-list">
 			<?php
 				/* Loop through and list the comments. Tell wp_list_comments()
-				 * to use clean_comment() to format the comments.
+				 * to use simplybusiness_comment() to format the comments.
 				 * If you want to overload this in a child theme then you can
-				 * define clean_comment() and that will be used instead.
-				 * See clean_comment() in includes/template-tags.php for more.
+				 * define simplybusiness_comment() and that will be used instead.
+				 * See simplybusiness_comment() in includes/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'clean_comment', 'avatar_size' => 50 ) );
+				wp_list_comments( array( 'callback' => 'simplybusiness_comment', 'avatar_size' => 50 ) );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'clean' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'clean' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'clean' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'simplybusiness' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'simplybusiness' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'simplybusiness' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
@@ -69,21 +69,21 @@ if ( post_password_required() )
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'clean' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'simplybusiness' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form( $args = array(
 			  'id_form'           => 'commentform',  // that's the wordpress default value! delete it or edit it ;)
 			  'id_submit'         => 'commentsubmit',
-			  'title_reply'       => __( 'Leave a Reply', 'clean' ),  // that's the wordpress default value! delete it or edit it ;)
-			  'title_reply_to'    => __( 'Leave a Reply to %s', 'clean' ),  // that's the wordpress default value! delete it or edit it ;)
-			  'cancel_reply_link' => __( 'Cancel Reply', 'clean' ),  // that's the wordpress default value! delete it or edit it ;)
-			  'label_submit'      => __( 'Post Comment', 'clean' ),  // that's the wordpress default value! delete it or edit it ;)
+			  'title_reply'       => __( 'Leave a Reply', 'simplybusiness' ),  // that's the wordpress default value! delete it or edit it ;)
+			  'title_reply_to'    => __( 'Leave a Reply to %s', 'simplybusiness' ),  // that's the wordpress default value! delete it or edit it ;)
+			  'cancel_reply_link' => __( 'Cancel Reply', 'simplybusiness' ),  // that's the wordpress default value! delete it or edit it ;)
+			  'label_submit'      => __( 'Post Comment', 'simplybusiness' ),  // that's the wordpress default value! delete it or edit it ;)
 
-			  'comment_field' =>  '<p><textarea placeholder="' . __('Start typing...', 'clean') . '" id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+			  'comment_field' =>  '<p><textarea placeholder="' . __('Start typing...', 'simplybusiness') . '" id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 
 			  'comment_notes_after' => '<p class="form-allowed-tags">' .
-				__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'clean' ) .
+				__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'simplybusiness' ) .
 				'</p><div class="alert alert-info">' . allowed_tags() . '</div>'
 
 			  // So, that was the needed stuff to have bootstrap basic styles for the form elements and buttons

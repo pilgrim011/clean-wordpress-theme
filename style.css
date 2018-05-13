@@ -1,13 +1,13 @@
 /*
-Theme Name: clean
+Theme Name: simplybusiness
 Theme URI: https://www.tvojsajt.com/
 Author: Zoran Stanić
 Author URI: https://github.com/pilgrim011
-Description: Clean is a simple theme primarily intended for business presentations.  It is a responsive theme with Bootstrap integrated. Clean offers plenty of customization like full color control, layout control, logo upload, header image, header and footer color control and much more. 
-Version: 0.1.0
+Description: Simply Business is a simple theme primarily intended for business presentations.  It is a responsive theme with Bootstrap integrated. Simply Business offers plenty of customization like full color control, layout control, logo upload, header image and much more. 
+Version: 1.0.1
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: clean
+Text Domain: simplybusiness
 Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, sticky-post,  theme-options, threaded-comments, translation-ready, featured-image-header, full-width-template
 
 This theme, like WordPress, is licensed under the GPL.
@@ -222,6 +222,16 @@ footer#colophon.site-footer{
     padding-left: 0;  /*idem*/
      margin-right: auto;
 	 margin-left: auto;
+	 background-color: steelblue;
+	 
+}
+#background-foot{
+	background-color: transparent;
+	border-color: transparent;
+	
+}
+a.credits{
+	color: white;
 }
 .transform{
 	text-transform: uppercase;
@@ -244,7 +254,7 @@ footer#colophon.site-footer{
 
  == Want to wrap just the content and sidebar in Bootstrap style? ==
 
- That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes.
+ That one is a great example to show that some things are much simplybusinesser and easier to do via just adding some HTML classes.
  In this case, we will add just one CSS class "panel", look for example at the beginning in content.php!
 
 
@@ -272,7 +282,7 @@ footer#colophon.site-footer{
 /* Hey, if you don't need my comments anymore, just delete me! :)  */
 
 
-/* styles for clean_pagination und clean_link_pages */
+/* styles for simplybusiness_pagination und simplybusiness_link_pages */
 nav form.tk-page-nav,
 nav .input-group,
 nav .input-group-btn,
@@ -351,9 +361,10 @@ div.site-info{
 a.navbar-brand.transform{
 	color: white;
 	text-align: left;
-	
 }
-
+a.navbar-brand.transform:hover { 
+    background-color: #d65c14;
+}
 #main-menu li a{
 	text-align: center;
 }

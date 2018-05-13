@@ -19,7 +19,7 @@ jQuery( document ).ready( function( $ ) {
     // Header text color.
     wp.customize( 'header_textcolor', function( value ) {
         value.bind( function( to ) {
-            if ( 'clean' === to ) {
+            if ( 'simplybusiness' === to ) {
                 $( '.site-title, .lead' ).css( {
                     'clip': 'rect(1px, 1px, 1px, 1px)',
                     'position': 'absolute'

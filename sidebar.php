@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area
  *
- * @package clean
+ * @package simplybusiness
  */
 ?>
 
@@ -21,14 +21,14 @@
 				</aside>
 
 				<aside id="archives" class="widget widget_archive">
-					<h3 class="widget-title"><?php _e( 'Archives', 'clean' ); ?></h3>
+					<h3 class="widget-title"><?php _e( 'Archives', 'simplybusiness' ); ?></h3>
 					<ul>
 						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 					</ul>
 				</aside>
 
 				<aside id="meta" class="widget widget_meta">
-					<h3 class="widget-title"><?php _e( 'Meta', 'clean' ); ?></h3>
+					<h3 class="widget-title"><?php _e( 'Meta', 'simplybusiness' ); ?></h3>
 					<ul>
 						<?php wp_register(); ?>
 						<li><?php wp_loginout(); ?></li>

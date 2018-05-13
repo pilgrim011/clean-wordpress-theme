@@ -1,5 +1,5 @@
-# Translation of clean in French (France)
-# This file is distributed under the same license as the clean package.
+# Translation of simplybusiness in French (France)
+# This file is distributed under the same license as the simplybusiness package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2016-10-04 20:50-0400\n"
@@ -8,19 +8,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 1.8.7\n"
-"Project-Id-Version: clean\n"
+"Project-Id-Version: simplybusiness\n"
 "POT-Creation-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 
 #. Description of the plugin/theme
-msgid "Hi, I am the ultra minimal starter theme clean, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress. You can find me on GitHub. Fork me! I'm waiting for you ;)"
-msgstr "Bonjour, Je suis le thème starter ultra minimal clean, prêt pour votre génial projet WordPress ! Je suis l'intégration du framework Bootstrap Twitter le plus minimaliste et homogène dans le thème starter _s d&rsquo;Automattic, les gars qui sont derrière WordPress. Vous pouvez me trouver sur GitHub. Forkez-moi ! Je vous attends ;)"
+msgid "Hi, I am the ultra minimal starter theme simplybusiness, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress. You can find me on GitHub. Fork me! I'm waiting for you ;)"
+msgstr "Bonjour, Je suis le thème starter ultra minimal simplybusiness, prêt pour votre génial projet WordPress ! Je suis l'intégration du framework Bootstrap Twitter le plus minimaliste et homogène dans le thème starter _s d&rsquo;Automattic, les gars qui sont derrière WordPress. Vous pouvez me trouver sur GitHub. Forkez-moi ! Je vous attends ;)"
 
 #. Theme Name of the plugin/theme
-msgid "clean"
-msgstr "clean"
+msgid "simplybusiness"
+msgstr "simplybusiness"
 
 #: sidebar.php:31
 msgid "Meta"
@@ -321,8 +321,8 @@ msgid "Author: %s"
 msgstr "Auteur : %s"
 
 #. Theme URI of the plugin/theme
-msgid "http://themekraft.com/store/clean-free-wordpress-starter-theme-based-on-twitter-bootstrap/"
-msgstr "http://themekraft.com/store/clean-free-wordpress-starter-theme-based-on-twitter-bootstrap/"
+msgid "http://themekraft.com/store/simplybusiness-free-wordpress-starter-theme-based-on-twitter-bootstrap/"
+msgstr "http://themekraft.com/store/simplybusiness-free-wordpress-starter-theme-based-on-twitter-bootstrap/"
 
 #. Author of the plugin/theme
 msgid "ThemeKraft"

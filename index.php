@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package clean
+ * @package simplybusiness
  */
 
 get_header(); ?>
@@ -28,8 +28,8 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php // clean_content_nav( 'nav-below' ); ?>
-        <?php clean_pagination(); ?>
+		<?php // simplybusiness_content_nav( 'nav-below' ); ?>
+        <?php simplybusiness_pagination(); ?>
 
 	<?php else : ?>
 
